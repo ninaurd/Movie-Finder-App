@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Movies Lookup Manual</string>
+    <string name="images_disclaimer">Изображения с www.imdb.com</string>
+    <string name="top_title">Поиск кино</string>
+
+<!-- ЗАГОЛОВКИ КНОПОК -->
+    <string name="menu">Меню</string>
+    <string name="favourites">Избранное</string>
+    <string name="watch_later">Смотреть позже</string>
+    <string name="selections">Подборки</string>
+    <string name="settings">Настройки</string>
+
+<!-- ТЕКСТ ДЛЯ ТОСТОВ КНОПОК МЕНЮ -->
+    <string name="menu_toast">Переход в главное меню</string>
+    <string name="favourites_toast">Посмотреть избранное</string>
+    <string name="watch_later_toast">Посмотреть список сохраненного на потом</string>
+    <string name="selections_toast">Посмотреть подборки</string>
+    <string name="settings_toast">Настройки приложения и поиска</string>
+    <string name="navigation_toast">Когда-нибудь здесь будет навигация</string>
+
+<!-- ТЕКСТ ДЛЯ ТОСТОВ К ИЗОБРАЖЕНИЯМ -->
+    <string name="walle_toast">Валл-и (2008)</string>
+    <string name="totoro_toast">Мой сосед Тоторо (1988)</string>
+    <string name="green_mile_toast">Зеленая миля (1999)</string>
+    <string name="sixth_sense_toast">Шестое чувство (1999)</string>
+    <string name="shutter_island_toast">Остров проклятых (2010)</string>
+    <string name="seven_pounds_toast">Семь жизней (2008)</string>
+    <string name="leon_toast">Лион (1994)</string>
+    <string name="joker_toast">Джокер (2019)</string>
+    <string name="closer_toast">Близость (2004)</string>
+
+    <!-- ОПИСАНИЕ К ИЗОБРАЖЕНИЯМ -->
+    <string name="walle_description">Валли робот-убощик на пустыре</string>
+    <string name="totoro_description">Тоторо с девочками на природе под зонтом</string>
+    <string name="green_description">Крупный темнокожий мужчина в комбинезоне</string>
+    <string name="sixth_sense_description">Брюс Уиллис в лучшие годы</string>
+    <string name="shutter_island_description">Лео ДиКаприо в прикиде детектива</string>
+    <string name="seven_pounds_description">Уилл Смит на белом фоне</string>
+    <string name="leon_description">Натали Портман подросток в темных очках и с чокером</string>
+    <string name="joker_description">Хоакин Феникс в гриме Джокера</string>
+    <string name="closer_description">Натали Портман в розовом парике-каре</string>
+
+
+</resources>

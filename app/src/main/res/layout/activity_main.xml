@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/top_toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/main_title">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/top_toolbar"
+            style="@style/TopToolbarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center_vertical"
+            app:menu="@menu/regular_toolbar_top"
+            app:navigationIcon="@drawable/icon_navigation"
+            app:title="@string/menu" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/main_title"
+        style="@style/TopTitleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/top_title"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--
+    для изображений мне захотелось сделать горизонтальный скролл, поэтому CardView
+    я применила на блоке с кнопками ниже
+    -->
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_toolbar_layout">
+
+        <LinearLayout
+            android:id="@+id/top_container"
+            style="@style/ImagesContainerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/closer"
+                android:layout_width="@dimen/movie_icon_size_top"
+                android:layout_height="@dimen/movie_icon_size_top"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:alpha="@dimen/image_alpha"
+                android:clickable="true"
+                android:contentDescription="@string/closer_description"
+                android:focusable="true"
+                android:src="@drawable/closer_2004" />
+
+            <ImageView
+                android:id="@+id/joker"
+                android:layout_width="@dimen/movie_icon_size_top"
+                android:layout_height="@dimen/movie_icon_size_top"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:alpha="@dimen/image_alpha"
+                android:clickable="true"
+                android:contentDescription="@string/joker_description"
+                android:focusable="true"
+                android:src="@drawable/joker_2019" />
+
+            <ImageView
+                android:id="@+id/leon"
+                android:layout_width="@dimen/movie_icon_size_top"
+                android:layout_height="@dimen/movie_icon_size_top"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:alpha="@dimen/image_alpha"
+                android:clickable="true"
+                android:contentDescription="@string/leon_description"
+                android:focusable="true"
+                android:src="@drawable/leon_1994" />
+
+            <ImageView
+                android:id="@+id/seven_pounds"
+                android:layout_width="@dimen/movie_icon_size_top"
+                android:layout_height="@dimen/movie_icon_size_top"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:alpha="@dimen/image_alpha"
+                android:clickable="true"
+                android:contentDescription="@string/seven_pounds_description"
+                android:focusable="true"
+                android:src="@drawable/seven_pounds_2008" />
+
+            <ImageView
+                android:id="@+id/shutter_island"
+                android:layout_width="@dimen/movie_icon_size_top"
+                android:layout_height="@dimen/movie_icon_size_top"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:alpha="@dimen/image_alpha"
+                android:clickable="true"
+                android:contentDescription="@string/shutter_island_description"
+                android:focusable="true"
+                android:src="@drawable/shutter_island_2010" />
+
+            <ImageView
+                android:id="@+id/sixth_sense"
+                android:layout_width="@dimen/movie_icon_size_top"
+                android:layout_height="@dimen/movie_icon_size_top"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:alpha="@dimen/image_alpha"
+                android:clickable="true"
+                android:contentDescription="@string/sixth_sense_description"
+                android:focusable="true"
+                android:src="@drawable/sixth_sense_1999" />
+
+            <ImageView
+                android:id="@+id/the_green_mile"
+                android:layout_width="@dimen/movie_icon_size_top"
+                android:layout_height="@dimen/movie_icon_size_top"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:contentDescription="@string/green_description"
+                android:focusable="true"
+                android:src="@drawable/the_green_mile_1999" />
+
+            <ImageView
+                android:id="@+id/totoro"
+                android:layout_width="@dimen/movie_icon_size_top"
+                android:layout_height="@dimen/movie_icon_size_top"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:alpha="@dimen/image_alpha"
+                android:clickable="true"
+                android:contentDescription="@string/totoro_description"
+                android:focusable="true"
+                android:src="@drawable/totoro_1988" />
+
+            <ImageView
+                android:id="@+id/walle"
+                android:layout_width="@dimen/movie_icon_size_top"
+                android:layout_height="@dimen/movie_icon_size_top"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:contentDescription="@string/walle_description"
+                android:focusable="true"
+                android:src="@drawable/walle_2008" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/img_disclaimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:padding="5dp"
+        android:text="@string/images_disclaimer"
+        android:textAlignment="center"
+        android:textSize="@dimen/source_disclaimer_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/bottom_toolbar"
+        app:layout_constraintTop_toBottomOf="@id/img_disclaimer"
+        tools:listitem="@layout/rv_item_film_data" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_toolbar"
+        style="@style/BottomToolbarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/regular_toolbar_bottom" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movies Lookup Manual</string>
+    <string name="images_disclaimer">Immagini dal www.imdb.com</string>
+    <string name="top_title">Ricerca dei film</string>
+    <string name="menu">Menu</string>
+    <string name="favourites">Preferiti</string>
+    <string name="watch_later">Guardare più tardi</string>
+    <string name="selections">Selezioni</string>
+    <string name="settings">Impostazioni</string>
+    <string name="menu_toast">Al menu principale</string>
+    <string name="favourites_toast">Vedi preferiti</string>
+    <string name="watch_later_toast">Vedi la lista da guardare più tardi</string>
+    <string name="selections_toast">Vedi selezioni</string>
+    <string name="settings_toast">Impostazioni dell\'app e della ricerca</string>
+    <string name="navigation_toast">Un giorno potrai navigare da qui</string>
+    <string name="walle_toast">Wall-e (2008)</string>
+    <string name="totoro_toast">Il mio vicino Totoro (1988)</string>
+    <string name="green_mile_toast">Il miglio verde (1999)</string>
+    <string name="sixth_sense_toast">Il sesto senso (1999)</string>
+    <string name="shutter_island_toast">Shutter Island (2010)</string>
+    <string name="seven_pounds_toast">Sette anime (2008)</string>
+    <string name="leon_toast">Leon (1994)</string>
+    <string name="joker_toast">Joker (2019)</string>
+    <string name="closer_toast">Closer (2004)</string>
+    <string name="walle_description">Wall-e ilrobot per le pulizie su un terreno incolto</string>
+    <string name="totoro_description">Totoro con le bambine all\'aperto sotto un\'ombrella</string>
+    <string name="green_description">Un grosso uomo di colore in una tuta</string>
+    <string name="sixth_sense_description">Bruce Willis nei suoi anni migliori</string>
+    <string name="shutter_island_description">Leo DiCaprio vestito da un detective</string>
+    <string name="seven_pounds_description">Will Smith con lo sfondo bianco</string>
+    <string name="leon_description">Natalie Portman da ragazza, con gli occhiali da sole e un choker</string>
+    <string name="joker_description">Joaquin Phoenix truccato da Joker</string>
+    <string name="closer_description">"Natalie Portman in una parrucca rosa a caschetto "</string>
+</resources>
