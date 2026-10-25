@@ -7,32 +7,36 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieslookupmanual.R
+import com.example.movieslookupmanual.data.FilmData
 import com.example.movieslookupmanual.data.GeneralRVType
 import com.example.movieslookupmanual.data.SeriesData
 import com.hannesdorfmann.adapterdelegates4.AbsListItemAdapterDelegate
 
-class SeriesAdapterDelegate :
-    AbsListItemAdapterDelegate<SeriesData, GeneralRVType, SeriesAdapterDelegate.MyVH>() {
+class SeriesAdapterDelegate (private val onItemClick: (SeriesData) -> Unit):
+    AbsListItemAdapterDelegate<SeriesData, GeneralRVType, SeriesAdapterDelegate.SeriesVH>() {
     override fun isForViewType(item: GeneralRVType, list: List<GeneralRVType?>, pos: Int): Boolean {
         return item is SeriesData
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup): MyVH {
-        return MyVH(
+    override fun onCreateViewHolder(parent: ViewGroup): SeriesVH {
+        return SeriesVH(
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.rv_item_series_data, parent, false)
         )
     }
 
-    override fun onBindViewHolder(myClass: SeriesData, vh: MyVH, payloads: List<Any?>) {
-        vh.posterView.setImageResource(myClass.poster)
-        vh.titleView.text = myClass.title
-        vh.yearView.text = myClass.years.toString()
-        vh.seasonsView.text = "Seasons: " + myClass.seasons.toString()
-        vh.descView.text = myClass.desc
+    override fun onBindViewHolder(dataClass: SeriesData, vh: SeriesVH, payloads: List<Any?>) {
+        vh.posterView.setImageResource(dataClass.poster)
+        vh.titleView.text = dataClass.title
+        vh.yearView.text = dataClass.years
+        vh.seasonsView.text = "Seasons: " + dataClass.seasons.toString()
+        vh.descView.text = dataClass.desc
+        vh.itemView.setOnClickListener {
+            onItemClick(dataClass)
+        }
     }
 
-    inner class MyVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class SeriesVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val posterView: ImageView = itemView.findViewById(R.id.series_icon)
         val titleView: TextView = itemView.findViewById(R.id.series_title_text)
         val seasonsView: TextView = itemView.findViewById(R.id.seasons_text)

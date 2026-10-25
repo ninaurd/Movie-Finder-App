@@ -11,27 +11,30 @@ import com.example.movieslookupmanual.data.FilmData
 import com.example.movieslookupmanual.data.GeneralRVType
 import com.hannesdorfmann.adapterdelegates4.AbsListItemAdapterDelegate
 
-class MoviesAdapterDelegate :
-    AbsListItemAdapterDelegate<FilmData, GeneralRVType, MoviesAdapterDelegate.MyVH>() {
+class MoviesAdapterDelegate (private val onItemClick: (FilmData) -> Unit) :
+    AbsListItemAdapterDelegate<FilmData, GeneralRVType, MoviesAdapterDelegate.MoviesVH>() {
     override fun isForViewType(item: GeneralRVType, list: List<GeneralRVType?>, pos: Int): Boolean {
         return item is FilmData
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup): MyVH {
-        return MyVH(
+    override fun onCreateViewHolder(parent: ViewGroup): MoviesVH {
+        return MoviesVH(
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.rv_item_film_data, parent, false)
         )
     }
 
-    override fun onBindViewHolder(myClass: FilmData, vh: MyVH, payloads: List<Any?>) {
-        vh.posterView.setImageResource(myClass.poster)
-        vh.titleView.text = myClass.title
-        vh.yearView.text = myClass.year.toString()
-        vh.descView.text = myClass.desc
+    override fun onBindViewHolder(dataClass: FilmData, vh: MoviesVH, payloads: List<Any?>) {
+        vh.posterView.setImageResource(dataClass.poster)
+        vh.titleView.text = dataClass.title
+        vh.yearView.text = dataClass.year.toString()
+        vh.descView.text = dataClass.desc
+        vh.itemView.setOnClickListener {
+            onItemClick(dataClass)
+        }
     }
 
-    inner class MyVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class MoviesVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val posterView: ImageView = itemView.findViewById(R.id.movies_icon)
         val titleView: TextView = itemView.findViewById(R.id.movies_title_text)
         val yearView: TextView = itemView.findViewById(R.id.years_text)

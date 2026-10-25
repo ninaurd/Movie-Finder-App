@@ -4,9 +4,9 @@ import androidx.annotation.DrawableRes
 
 data class FilmData(
     override val id: Int,
-    val title: String,
+    override val title: String,
     val year: Int,
     // Int: id of the image from res
-    @DrawableRes val poster: Int,
-    val desc: String
+    @DrawableRes override val poster: Int,
+    override val desc: String
 ) : GeneralRVType

@@ -1,5 +1,6 @@
 package com.example.movieslookupmanual
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toast
@@ -70,20 +71,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         val recycler = findViewById<RecyclerView>(R.id.recycler)
-        val adapter = RVAdapter()
+        val adapter = RVAdapter(::openDetails)
         recycler.adapter = adapter
 
         val items: List<GeneralRVType> = listOf(
-            FilmData(1, "TITLE", 2000, R.drawable.me, "something about the film here something about the film here something about the film here something about the film here something about the film here something about the film here something about the film here"),
-            FilmData(2, "TITLE", 2000, R.drawable.leon_1994, "something about the film here"),
-            FilmData(3, "TITLE", 2000, R.drawable.joker_2019, "something about the film here"),
-            SeriesData(4, "TITLE", 2000, 12, R.drawable.closer_2004, "something about the film here"),
-            SeriesData(5, "TITLE", 2000, 5, R.drawable.seven_pounds_2008, "something about the film here"),
-            FilmData(6, "TITLE", 2000, R.drawable.shutter_island_2010, "something about the film here"),
-            FilmData(7, "TITLE", 2000, R.drawable.sixth_sense_1999, "something about the film here"),
-            SeriesData(8, "TITLE", 2000, 3, R.drawable.the_green_mile_1999, "something about the film here"),
-            FilmData(9, "TITLE", 2000, R.drawable.totoro_1988, "something about the film here"),
-            FilmData(10, "TITLE", 2000, R.drawable.walle_2008, "something about the film here")
+            FilmData(1, "TITLE", 2000, R.drawable.me, "1 - something about the film here"),
+            FilmData(2, "TITLE", 2000, R.drawable.leon_1994, "2 - something about the film here"),
+            FilmData(3, "TITLE", 2000, R.drawable.joker_2019, "3 - something about the film here"),
+            SeriesData(4, "TITLE", "(2000-2005)", 12, R.drawable.closer_2004, "4 - something about the film here"),
+            SeriesData(5, "TITLE", "(2000-2005)", 5, R.drawable.seven_pounds_2008, "5 - something about the film here"),
+            FilmData(6, "TITLE", 2000, R.drawable.shutter_island_2010, "6 - something about the film here"),
+            FilmData(7, "TITLE", 2000, R.drawable.sixth_sense_1999, "7 - something about the film here"),
+            SeriesData(8, "TITLE", "(2000-2005)", 3, R.drawable.the_green_mile_1999, "8 - something about the film here"),
+            FilmData(9, "TITLE", 2000, R.drawable.totoro_1988, "9 - something about the film here"),
+            FilmData(10, "TITLE", 2000, R.drawable.walle_2008, "10 - something about the film here")
         )
 
         adapter.setItems(items)
@@ -105,5 +106,12 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, textId, Toast.LENGTH_SHORT).show()
             }
         }
+    }
+    private fun openDetails(item: GeneralRVType) {
+        val intent = Intent(this, DetailsActivity::class.java)
+        intent.putExtra("desc", item.desc)
+        intent.putExtra("title", item.title)
+        intent.putExtra("poster", item.poster)
+        startActivity(intent)
     }
 }

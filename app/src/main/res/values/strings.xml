@@ -3,14 +3,14 @@
     <string name="images_disclaimer">Изображения с www.imdb.com</string>
     <string name="top_title">Поиск кино</string>
 
-<!-- ЗАГОЛОВКИ КНОПОК -->
+    <!-- ЗАГОЛОВКИ КНОПОК -->
     <string name="menu">Меню</string>
     <string name="favourites">Избранное</string>
     <string name="watch_later">Смотреть позже</string>
     <string name="selections">Подборки</string>
     <string name="settings">Настройки</string>
 
-<!-- ТЕКСТ ДЛЯ ТОСТОВ КНОПОК МЕНЮ -->
+    <!-- ТЕКСТ ДЛЯ ТОСТОВ КНОПОК МЕНЮ -->
     <string name="menu_toast">Переход в главное меню</string>
     <string name="favourites_toast">Посмотреть избранное</string>
     <string name="watch_later_toast">Посмотреть список сохраненного на потом</string>
@@ -18,7 +18,7 @@
     <string name="settings_toast">Настройки приложения и поиска</string>
     <string name="navigation_toast">Когда-нибудь здесь будет навигация</string>
 
-<!-- ТЕКСТ ДЛЯ ТОСТОВ К ИЗОБРАЖЕНИЯМ -->
+    <!-- ТЕКСТ ДЛЯ ТОСТОВ К ИЗОБРАЖЕНИЯМ -->
     <string name="walle_toast">Валл-и (2008)</string>
     <string name="totoro_toast">Мой сосед Тоторо (1988)</string>
     <string name="green_mile_toast">Зеленая миля (1999)</string>
