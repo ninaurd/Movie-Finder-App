@@ -32,4 +32,151 @@
     <string name="leon_description">Natalie Portman da ragazza, con gli occhiali da sole e un choker</string>
     <string name="joker_description">Joaquin Phoenix truccato da Joker</string>
     <string name="closer_description">"Natalie Portman in una parrucca rosa a caschetto "</string>
+    <string name="undone">Cancellato</string>
+    <string name="fight_club_title">Fight Club</string>
+    <string name="fight_club">Un impiegato che soffre di insonnia e un eccentrico produttore di sapone
+    fondano un club di combattimento clandestino che si trasforma presto in qualcosa di molto più
+        grande.\n\nUn narratore senza nome frequenta gruppi di sostegno psicologico nel tentativo di controllare
+    le proprie emozioni e combattere l\'insonnia. Quando incontra Marla, un\'altra persona
+    che finge di aver bisogno di quei gruppi, la sua vita sembra diventare un po\' più sopportabile.
+    Tuttavia, dopo aver conosciuto Tyler, viene trascinato in un club di combattimento
+    clandestino e in una discutibile attività di produzione di sapone.
+    Insieme, i due uomini perdono progressivamente il controllo della situazione
+    e finiscono per competere ferocemente per amore e potere.</string>
+    <string name="matrix_title">Matrix</string>
+    <string name="matrix">Un hacker scopre che la sua intera vita
+    non è altro che una complessa simulazione creata da una malvagia intelligenza artificiale.\n\nThomas
+        A. Anderson conduce una doppia vita. Di giorno è un normale programmatore,
+    mentre di notte è un hacker conosciuto come Neo.
+    Neo ha sempre messo in dubbio la realtà che lo circonda, ma la verità supera
+    qualsiasi cosa abbia mai immaginato.
+    Quando viene contattato da Morpheus, un leggendario hacker considerato
+    un terrorista dal governo, Neo diventa un bersaglio della polizia.
+    Unendosi alla ribellione contro le macchine, deve affrontare gli agenti:
+    potentissimi programmi informatici creati per fermare lui
+    e annientare la resistenza umana.</string>
+    <string name="the_housemaid_title">Una di famiglia</string>
+    <string name="the_housemaid">Millie, una giovane donna in difficoltà, trova lavoro come domestica
+        convivente presso una coppia benestante, Nina e Andrew. Entra in una lussuosa villa piena di segreti,
+        manipolazioni e giochi psicologici sempre più intensi, che la trascinano in una pericolosa
+        rete di relazioni.\n\nMillie arriva nella ricca dimora nella speranza di trovare stabilità
+        dopo un periodo difficile della sua vita. I primi segnali inquietanti emergono nel complicato
+        rapporto tra Nina e Andrew, dove dietro un\'apparente generosità si nasconde un forte
+        desiderio di controllo. Millie cerca di comprendere la situazione e usa il proprio fascino
+        come istinto di sopravvivenza. Con l\'intensificarsi del conflitto, attenzioni, gelosie e
+        alleanze mutevoli trasformano la casa in un ambiente di crescente tensione psicologica.
+        Arriva infine un momento di scelta morale: Millie deve decidere se continuare a sottomettersi
+        oppure affermare la propria indipendenza in un sistema che premia la manipolazione. Il prezzo
+        di entrambe le possibilità la costringe a confrontarsi con la propria identità.</string>
+    <string name="money_heist_title">La casa di carta</string>
+    <string name="money_heist">Un insolito gruppo di rapinatori tenta
+    di realizzare la rapina perfetta nella storia della Spagna:
+    rubare 2,4 miliardi di euro dalla Zecca Reale spagnola.\n\nPer
+        compiere la più grande rapina della storia, un uomo misterioso
+    soprannominato il Professore recluta otto criminali
+    che non hanno nulla da perdere.
+    Cinque mesi di isolamento vengono dedicati a memorizzare
+    ogni passaggio, ogni dettaglio e ogni possibile imprevisto.
+    La preparazione culmina in undici giorni di assedio
+    all\'interno della Fabbrica Nazionale della Moneta e del Timbro.
+    Circondati dalla polizia e con decine di ostaggi sotto il loro controllo,
+    i rapinatori dovranno scoprire se la loro scommessa disperata
+    li porterà a ottenere tutto oppure a perdere ogni cosa.</string>
+    <string name="squid_game_title">Squid Game</string>
+    <string name="squid_game">Centinaia di persone in gravi difficoltà economiche accettano un
+        misterioso invito a partecipare a giochi per bambini. In palio c\'è un allettante premio in
+        denaro, ma la posta in gioco è mortale.\n\nÈ la storia di persone che, per vari motivi, hanno
+        fallito nella vita, ma che improvvisamente ricevono un misterioso invito a partecipare a un
+        gioco di sopravvivenza per vincere oltre 38 milioni di dollari statunitensi. Il gioco si
+        svolge su un\'isola isolata, dove i partecipanti vengono tenuti prigionieri fino a quando
+        non rimane un unico vincitore. La storia include popolari giochi coreani per bambini degli
+        anni Settanta e Ottanta, tra cui il gioco del calamaro, da cui la serie prende il nome. Si tratta
+        di una variante dell\'acchiapparella in cui attaccanti e difensori si sfidano su un campo
+        da gioco a forma di calamaro disegnato sul terreno.</string>
+    <string name="blacklist_title">The Blacklist</string>
+    <string name="blacklist">La vita della giovane profiler dell\'FBI
+    Elizabeth Keen viene completamente sconvolta quando
+    Raymond Reddington, un misterioso criminale sfuggito
+    alla cattura per decenni, si consegna volontariamente
+    alle autorità e insiste per parlare esclusivamente con lei.\n\nRaymond
+        Reddington, soprannominato \"Red\", è un uomo d\'affari
+    estremamente eloquente, colto e intelligente, oltre che
+    un brillante stratega criminale.
+    Si ritiene che per oltre vent\'anni sia comparso
+    nelle liste dei dieci criminali più ricercati
+    di diverse agenzie di polizia degli Stati Uniti.
+    Secondo la leggenda, Red è tanto sfuggente quanto astuto.
+    Controlla una complessa rete di attività e possiede
+    una straordinaria capacità di raccogliere informazioni
+    e sfruttarle immediatamente a proprio vantaggio.
+    Durante il primo giorno di lavoro di una giovane profiler
+    appena uscita dall\'accademia di Quantico,
+    Red propone all\'FBI una particolare sfida intellettuale.
+    Promette di consegnare criminali e svelare complotti
+    di cui le autorità non sospettavano nemmeno l\'esistenza.
+    In cambio, chiede soltanto una cosa:
+    poter scegliere personalmente la persona con cui collaborare.</string>
+
+    <string name="the_substance_title">The Substance</string>
+    <string name="the_substance">Una celebrità ormai in declino assume un farmaco del mercato nero:
+        una sostanza capace di replicare le cellule e creare una versione più giovane e migliore di se stessa.\n\nAvete
+        mai sognato una versione migliore di voi stessi? Sempre voi. Solo migliori sotto ogni
+        aspetto. Sul serio. Dovete assolutamente provare questo nuovo prodotto. Si chiama la Sostanza.
+        Mi ha cambiato la vita. Genera un altro voi. Una versione nuova, più giovane, più bella, più perfetta.
+        E c\'è una sola regola: dovete dividervi il tempo. Una settimana per voi. Una settimana per
+        il vostro nuovo io. Sette giorni ciascuno. Un equilibrio perfetto. Facile, vero? Se rispettate
+        l\'equilibrio… cosa potrebbe mai andare storto?</string>
+    <string name="untouchable_title">Quasi amici</string>
+    <string name="untouchable">Dopo un incidente con il parapendio
+    che lo lascia paralizzato, un ricco aristocratico assume
+    un giovane proveniente da un quartiere difficile
+    per assisterlo nella vita quotidiana.\n\nPhilippe,
+        un aristocratico benestante rimasto tetraplegico,
+    assume come assistente Driss, un ex detenuto.
+    Nonostante le profonde differenze culturali e sociali,
+    tra i due nasce una sincera amicizia che cambia le loro vite.
+    Attraverso l\'umorismo, l\'empatia e il rispetto reciproco,
+    affrontano insieme difficoltà fisiche, emotive e sociali.
+    Il film racconta l\'amicizia, la crescita personale
+    e la dignità umana, mescolando commedia e dramma.
+    La storia mostra come la comprensione e il sostegno reciproco
+    possano unire persone provenienti da mondi completamente diversi
+    e trasformare profondamente le loro esistenze.</string>
+    <string name="up_title">Up</string>
+    <string name="up">Un anziano brontolone trasforma
+    la propria casa in un velivolo grazie a migliaia
+    di palloncini e parte per il Sud America
+    insieme a un giovane passeggero clandestino.\n\nDa bambino,
+        Carl Fredricksen sognava di esplorare
+    il Sud America e trovare le leggendarie Cascate Paradiso.
+    Circa 64 anni dopo, finalmente ha la possibilità
+    di realizzare il suo sogno.
+    Legando migliaia di palloncini alla casa,
+    Carl si solleva in cielo e parte per un viaggio
+    insieme al giovane esploratore Russell.
+    Durante il percorso incontrano nuovi amici,
+    tra cui un cane parlante, e scoprono che qualcuno
+    sta tramando qualcosa di malvagio.
+    Ben presto Carl si rende conto che il cattivo
+    è proprio il suo idolo d\'infanzia.</string>
+    <string name="share">Condividere</string>
+    <string name="added_to_fav">Aggiunto ai preferiti</string>
+    <string name="saved_for_later">Salvato per dopo</string>
+    <string name="added_to_collection">Aggiunto alla collezione</string>
+    <string name="undo">Cancellare</string>
+    <string name="wicker_park_title">Wicker Park</string>
+    <string name="wicker_park">Un giovane pubblicitario cerca ossessivamente la sua ex fidanzata Lisa,
+        scomparsa misteriosamente due anni prima.\n\nMatthew, un giovane pubblicitario di Chicago,
+        mette da parte tutti i suoi impegni e un viaggio di lavoro in Cina quando crede di aver visto
+        Lisa, l\'amore della sua vita, che due anni prima lo aveva lasciato senza una spiegazione. Un
+        giorno gli sembra di scorgerla mentre esce da un ristorante. Con un piccolo aiuto del suo amico
+        Luke, Matthew inizia a cercarla in modo instancabile e quasi ossessivo. Durante le sue ricerche
+        incontra un\'altra giovane donna che si fa chiamare Lisa. Senza saperlo, Matthew si imbatte
+        in un\'attrice di nome Alex, che potrebbe custodire la chiave del mistero della scomparsa della
+        vera Lisa e aiutarlo a ritrovarla.</string>
+    <plurals name="seasons">
+        <item quantity="one">%d stagione</item>
+        <item quantity="other">%d stagioni</item>
+    </plurals>
+
 </resources>
