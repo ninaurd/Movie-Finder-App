@@ -7,12 +7,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieslookupmanual.R
-import com.example.movieslookupmanual.data.FilmData
 import com.example.movieslookupmanual.data.GeneralRVType
 import com.example.movieslookupmanual.data.SeriesData
 import com.hannesdorfmann.adapterdelegates4.AbsListItemAdapterDelegate
 
-class SeriesAdapterDelegate (private val onItemClick: (SeriesData) -> Unit):
+class SeriesAdapterDelegate(private val onItemClick: (SeriesData) -> Unit) :
     AbsListItemAdapterDelegate<SeriesData, GeneralRVType, SeriesAdapterDelegate.SeriesVH>() {
     override fun isForViewType(item: GeneralRVType, list: List<GeneralRVType?>, pos: Int): Boolean {
         return item is SeriesData
@@ -29,14 +28,19 @@ class SeriesAdapterDelegate (private val onItemClick: (SeriesData) -> Unit):
         vh.posterView.setImageResource(dataClass.poster)
         vh.titleView.text = dataClass.title
         vh.yearView.text = dataClass.years
-        vh.seasonsView.text = "Seasons: " + dataClass.seasons.toString()
+        vh.seasonsView.text =
+            vh.seasonsView.context.resources.getQuantityString(
+                R.plurals.seasons,
+                dataClass.seasons,
+                dataClass.seasons
+            )
         vh.descView.text = dataClass.desc
         vh.itemView.setOnClickListener {
             onItemClick(dataClass)
         }
     }
 
-    inner class SeriesVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class SeriesVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val posterView: ImageView = itemView.findViewById(R.id.series_icon)
         val titleView: TextView = itemView.findViewById(R.id.series_title_text)
         val seasonsView: TextView = itemView.findViewById(R.id.seasons_text)

@@ -1,44 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- VARIOUS TITLES AND MORE -->
     <string name="app_name">Movies Lookup Manual</string>
-    <string name="images_disclaimer">Изображения с www.imdb.com</string>
-    <string name="top_title">Поиск кино</string>
+    <string name="images_disclaimer">Images from www.imdb.com</string>
+    <string name="menu">Menu</string>
+    <string name="favourites">Favourites</string>
+    <string name="watch_later">Watch later</string>
+    <string name="selections">Selections</string>
+    <string name="settings">Settings</string>
+    <string name="top_title">Movie Finder</string>
+    <string name="share">Share</string>
+    <string name="added_to_fav">Added to favourites</string>
+    <string name="saved_for_later">Saved for later</string>
+    <string name="added_to_collection">Added to collection</string>
+    <string name="undo">Undo</string>
+    <plurals name="seasons">
+        <item quantity="one">%d season</item>
+        <item quantity="other">%d seasons</item>
+    </plurals>
+    <string name="link_to_google_play" translatable="false">https://play.google.com/store/apps/details?id=$packageName</string>
 
-    <!-- ЗАГОЛОВКИ КНОПОК -->
-    <string name="menu">Меню</string>
-    <string name="favourites">Избранное</string>
-    <string name="watch_later">Смотреть позже</string>
-    <string name="selections">Подборки</string>
-    <string name="settings">Настройки</string>
+    <!-- TOASTS -->
+    <string name="menu_toast">To the main menu</string>
+    <string name="favourites_toast">Check your favourites</string>
+    <string name="watch_later_toast">Check your watch later list</string>
+    <string name="selections_toast">Check our selections</string>
+    <string name="settings_toast">App and search settings</string>
+    <string name="navigation_toast">One day there will be navigation here</string>
+    <string name="walle_toast">Wall-e (2008)</string>
+    <string name="totoro_toast">My Neighbor Totoro (1988)</string>
+    <string name="green_mile_toast">The Green Mile (1999)</string>
+    <string name="sixth_sense_toast">The 6th Sense (1999)</string>
+    <string name="shutter_island_toast">Shutter Island (2010)</string>
+    <string name="seven_pounds_toast">Seven Pounds (2008)</string>
+    <string name="leon_toast">Leon (1994)</string>
+    <string name="joker_toast">Joker (2019)</string>
+    <string name="closer_toast">Closer (2004)</string>
 
-    <!-- ТЕКСТ ДЛЯ ТОСТОВ КНОПОК МЕНЮ -->
-    <string name="menu_toast">Переход в главное меню</string>
-    <string name="favourites_toast">Посмотреть избранное</string>
-    <string name="watch_later_toast">Посмотреть список сохраненного на потом</string>
-    <string name="selections_toast">Посмотреть подборки</string>
-    <string name="settings_toast">Настройки приложения и поиска</string>
-    <string name="navigation_toast">Когда-нибудь здесь будет навигация</string>
+    <!-- DESCRIPTIONS FOR IMAGES IN THE TOP SCROLL -->
+    <string name="walle_description">Wall-e robot the cleaner on a wasteland</string>
+    <string name="totoro_description">Totoro with the girls in the nature</string>
+    <string name="green_description">Big black man in a jumpsuit</string>
+    <string name="sixth_sense_description">Bruce Willis in his best years</string>
+    <string name="shutter_island_description">Leo DiCaprio dressed as a detective</string>
+    <string name="seven_pounds_description">Will Smith on a white background</string>
+    <string name="leon_description">Natalie Portman as a teen, wearing sunglasses and a choker</string>
+    <string name="joker_description">Joaquin Phoenix in Joker make-up</string>
+    <string name="closer_description">Natalie Portman in a pink bob wig</string>
+    <string name="undone">Undone</string>
 
-    <!-- ТЕКСТ ДЛЯ ТОСТОВ К ИЗОБРАЖЕНИЯМ -->
-    <string name="walle_toast">Валл-и (2008)</string>
-    <string name="totoro_toast">Мой сосед Тоторо (1988)</string>
-    <string name="green_mile_toast">Зеленая миля (1999)</string>
-    <string name="sixth_sense_toast">Шестое чувство (1999)</string>
-    <string name="shutter_island_toast">Остров проклятых (2010)</string>
-    <string name="seven_pounds_toast">Семь жизней (2008)</string>
-    <string name="leon_toast">Лион (1994)</string>
-    <string name="joker_toast">Джокер (2019)</string>
-    <string name="closer_toast">Близость (2004)</string>
+    <!-- TITLES AND DESCRIPTIONS FOR MOVIES & SERIES-->
+    <string name="fight_club_title">Fight Club</string>
+    <string name="fight_club">An insomniac office worker and a devil-may-care soap maker form an
+        underground fight club that evolves into much more.\n\nA nameless first-person narrator
+        attends support groups in an attempt to subdue his emotional state and relieve his insomniac state.
+        When he meets Marla, another fake attendee of support groups, his life seems to become
+        a little more bearable. However, when he associates himself with Tyler he is dragged into
+        an underground fight club and soap-making scheme. Together the two men spiral out of control
+        and engage in competitive rivalry for love and power.</string>
 
-    <!-- ОПИСАНИЕ К ИЗОБРАЖЕНИЯМ -->
-    <string name="walle_description">Валли робот-убощик на пустыре</string>
-    <string name="totoro_description">Тоторо с девочками на природе под зонтом</string>
-    <string name="green_description">Крупный темнокожий мужчина в комбинезоне</string>
-    <string name="sixth_sense_description">Брюс Уиллис в лучшие годы</string>
-    <string name="shutter_island_description">Лео ДиКаприо в прикиде детектива</string>
-    <string name="seven_pounds_description">Уилл Смит на белом фоне</string>
-    <string name="leon_description">Натали Портман подросток в темных очках и с чокером</string>
-    <string name="joker_description">Хоакин Феникс в гриме Джокера</string>
-    <string name="closer_description">Натали Портман в розовом парике-каре</string>
+    <string name="matrix_title">The Matrix</string>
+    <string name="matrix">A computer hacker discovers that his life is nothing more than an elaborate
+        simulation run by an evil AI.\n\nThomas A. Anderson is a man living two lives. By day, he is an
+        average computer programmer and by night a hacker known as Neo. Neo has always questioned his
+        reality, but the truth is far beyond his imagination. Neo finds himself targeted by the police
+        when he is contacted by Morpheus, a legendary computer hacker branded a terrorist by the government.
+        As a rebel against the machines, Neo must confront the agents: super-powerful computer programs
+        devoted to stopping Neo and the entire human rebellion.</string>
 
+    <string name="the_housemaid_title">The Housemaid</string>
+    <string name="the_housemaid">Millie, a struggling young woman, becomes a live-in maid for a
+        wealthy couple, Nina and Andrew. She enters a mansion of secrets, manipulation, and escalating
+        psychological games that pull her into a dangerous relationship dynamic.\n\nMillie arrives
+        at a wealthy household seeking stability after instability. The Catalyst appears in the
+        uneasy dynamic between Nina and Andrew, where generosity carries control beneath it. Millie
+        responds by reading the room and using charm as survival instinct. As the Collision builds,
+        attention, jealousy, and shifting alliances turn the home into a tense psychological arena.
+        A Moral Pivot arrives when Millie must choose whether to remain pliant or assert herself within
+        a system that rewards manipulation, and the cost of either path presses directly on her
+        sense of identity.
+        </string>
+
+    <string name="money_heist_title">Money Heist</string>
+    <string name="money_heist">An unusual group of robbers attempts to carry out the most perfect robbery in Spanish
+        history: stealing 2.4 billion euros from the Royal Mint of Spain.\n\nTo carry out the biggest heist
+        in history, a mysterious man called The Professor recruits a band of eight robbers, none of whom
+        have anything to lose. Five months of seclusion memorizing every step, every detail, every probability,
+        culminate in 11 days of lockup in the National Coinage and Stamp Factory of Spain, surrounded by
+        police forces and with dozens of hostages in their power, to find out whether their suicide wager
+        will lead to everything - or nothing.</string>
+
+    <string name="squid_game_title">Squid Game</string>
+    <string name="squid_game">Hundreds of cash-strapped players accept a strange invitation to compete
+        in children\'s games. A tempting prize awaits, but with deadly high stakes.\n\nA story of people
+        who fail at life for various reasons, but suddenly receive a mysterious
+        invitation to participate in a survival game to win more than 38 million US dollars. The game
+        takes place on an isolated island and the participants are locked up until there is a final
+        winner. The story incorporates popular Korean children\'s games from the 1970s and 1980s, such
+        as squid game, the literal translation of its Korean name, which is a type of tag where offense
+        and defense use a squid-shaped board drawn in the dirt.</string>
+
+    <string name="blacklist_title">The Blacklist</string>
+    <string name="blacklist">A new FBI profiler, Elizabeth Keen, has her entire life uprooted when a
+        mysterious criminal, Raymond Reddington, who has eluded capture for decades, turns himself in
+        and insists on speaking only to her.\n\nA highly articulate, erudite and intelligent businessman
+        and mastermind, \"Red\" Reddington, has allegedly been on the \"10 Most Wanted List\" of various U.S.
+        law enforcement agencies for over 20 years. The legend is that Red is as elusive as he is clever,
+        controlling a labyrinth of creative enterprises, coupled with uncanny ability to gather and finesse
+        information at the drop of a hat. On the first day at FBI for a new female profiler fresh out
+        of Quantico, Red offers to bandy wits with the FBI. Red promises to deliver various criminals
+        and plots previously unknown to any branch of law enforcement… and all Red requests in return
+        is to choose his muse.</string>
+
+    <string name="the_substance_title">The Substance</string>
+    <string name="the_substance">A fading celebrity takes a black-market drug: a cell-replicating
+        substance that helps her create a younger, better version of herself.\n\nHave you ever dreamed
+        of a better version of yourself? You. Only better in every way. Seriously.
+        You\'ve got to try this new product. It\'s called the Substance. It changed my life. It generates
+        another you. A new, younger, more beautiful, more perfect you. And there\'s only one rule:
+        you share time. One week for you. One week for the new you. Seven days each. A perfect balance.
+        Easy, right? If you respect the balance… what could possibly go wrong?</string>
+
+    <string name="untouchable_title">Untouchable</string>
+    <string name="untouchable">After he becomes a quadriplegic from a paragliding accident, an aristocrat
+        hires a young man from the projects to be his caregiver.\n\nPhilippe, a wealthy quadriplegic,
+        hires Driss, an ex-convict, as his caregiver. Despite cultural and social differences, the
+        two form a deep friendship that transforms their lives. Through humor, empathy, and mutual
+        respect, they navigate physical, emotional, and social challenges. The film explores friendship,
+        personal growth, and human dignity, blending comedy and drama to highlight the transformative
+        power of connection and understanding across divides.</string>
+
+    <string name="up_title">Up</string>
+    <string name="up">A grumpy old man turns his house into an airship using balloons and flies off
+        to South America with a young stowaway.\n\nAs a boy, Carl Fredricksen wanted to explore South
+        America and find the forbidden Paradise Falls. About 64 years later he gets to begin his journey
+        along with Boy Scout Russell by lifting his house with thousands of balloons. On their journey,
+        they make many new friends including a talking dog, and figure out that someone has evil plans.
+        Carl soon realizes that this evildoer is his childhood idol.</string>
+
+    <string name="wicker_park_title">Wicker Park</string>
+    <string name="wicker_park">A young advertising executive searches obsessively for his ex-lover
+        Lisa who disappeared two years earlier.\n\nMatthew, a young advertising executive in Chicago,
+        puts his life and a business trip to China on hold when he thinks he sees Lisa, the love of
+        his life who walked out on him without a word two years earlier, walking out of a restaurant
+        one day. With a little help from his friend Luke, Matthew obsessively and relentlessly tracks
+        Lisa down and while doing so, runs into another young woman calling herself Lisa whom, unknown
+        to Matthew, is an actress named Alex and may hold the key to Lisa\'s disappearance, and
+        discovery.</string>
 
 </resources>

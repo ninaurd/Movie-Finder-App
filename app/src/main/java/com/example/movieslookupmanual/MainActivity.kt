@@ -74,17 +74,75 @@ class MainActivity : AppCompatActivity() {
         val adapter = RVAdapter(::openDetails)
         recycler.adapter = adapter
 
+        // temporary fixed movies and series list - will be replaced with some server import
         val items: List<GeneralRVType> = listOf(
-            FilmData(1, "TITLE", 2000, R.drawable.me, "1 - something about the film here"),
-            FilmData(2, "TITLE", 2000, R.drawable.leon_1994, "2 - something about the film here"),
-            FilmData(3, "TITLE", 2000, R.drawable.joker_2019, "3 - something about the film here"),
-            SeriesData(4, "TITLE", "(2000-2005)", 12, R.drawable.closer_2004, "4 - something about the film here"),
-            SeriesData(5, "TITLE", "(2000-2005)", 5, R.drawable.seven_pounds_2008, "5 - something about the film here"),
-            FilmData(6, "TITLE", 2000, R.drawable.shutter_island_2010, "6 - something about the film here"),
-            FilmData(7, "TITLE", 2000, R.drawable.sixth_sense_1999, "7 - something about the film here"),
-            SeriesData(8, "TITLE", "(2000-2005)", 3, R.drawable.the_green_mile_1999, "8 - something about the film here"),
-            FilmData(9, "TITLE", 2000, R.drawable.totoro_1988, "9 - something about the film here"),
-            FilmData(10, "TITLE", 2000, R.drawable.walle_2008, "10 - something about the film here")
+            FilmData(
+                1,
+                getString(R.string.fight_club_title),
+                1999,
+                R.drawable.fight_club,
+                getString(R.string.fight_club)
+            ),
+            FilmData(
+                2,
+                getString(R.string.matrix_title),
+                1999,
+                R.drawable.matrix,
+                getString(R.string.matrix)
+            ),
+            FilmData(
+                3,
+                getString(R.string.the_housemaid_title),
+                2025,
+                R.drawable.the_housemaid,
+                getString(R.string.the_housemaid)
+            ),
+            SeriesData(
+                4,
+                getString(R.string.money_heist_title),
+                "(2017-2021)",
+                5,
+                R.drawable.money_heist,
+                getString(R.string.money_heist)
+            ),
+            SeriesData(
+                5,
+                getString(R.string.squid_game_title),
+                "(2021-2025)",
+                3,
+                R.drawable.squid_game,
+                getString(R.string.squid_game)
+            ),
+            FilmData(
+                6,
+                getString(R.string.the_substance_title),
+                2024,
+                R.drawable.the_substance,
+                getString(R.string.the_substance)
+            ),
+            FilmData(
+                7,
+                getString(R.string.untouchable_title),
+                2011,
+                R.drawable.untouchable,
+                getString(R.string.untouchable)
+            ),
+            SeriesData(
+                8,
+                getString(R.string.blacklist_title),
+                "(2013-2023)",
+                10,
+                R.drawable.blacklist,
+                getString(R.string.blacklist)
+            ),
+            FilmData(9, getString(R.string.up_title), 2009, R.drawable.up, getString(R.string.up)),
+            FilmData(
+                10,
+                getString(R.string.wicker_park_title),
+                2004,
+                R.drawable.wicker_park,
+                getString(R.string.wicker_park)
+            )
         )
 
         adapter.setItems(items)
@@ -107,6 +165,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    // separate function for transferring data bit by bit to the activity
     private fun openDetails(item: GeneralRVType) {
         val intent = Intent(this, DetailsActivity::class.java)
         intent.putExtra("desc", item.desc)

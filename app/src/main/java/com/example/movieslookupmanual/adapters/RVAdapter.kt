@@ -6,7 +6,7 @@ import com.example.movieslookupmanual.data.GeneralRVType
 import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 
 class RVAdapter(
-    private val onItemClick: (GeneralRVType) -> Unit
+    onItemClick: (GeneralRVType) -> Unit
 ) : ListDelegationAdapter<List<GeneralRVType>>() {
     init {
         delegatesManager.addDelegate(MoviesAdapterDelegate(onItemClick))
@@ -17,7 +17,7 @@ class RVAdapter(
         val oldList = items ?: emptyList()
         val newList = newItems ?: emptyList()
         val diffResult = DiffUtil.calculateDiff(GeneralTypeDiffUtil(oldList, newList))
-        super.setItems(newList)
+        items = newList
         diffResult.dispatchUpdatesTo(this)
     }
 }

@@ -11,7 +11,7 @@ import com.example.movieslookupmanual.data.FilmData
 import com.example.movieslookupmanual.data.GeneralRVType
 import com.hannesdorfmann.adapterdelegates4.AbsListItemAdapterDelegate
 
-class MoviesAdapterDelegate (private val onItemClick: (FilmData) -> Unit) :
+class MoviesAdapterDelegate(private val onItemClick: (FilmData) -> Unit) :
     AbsListItemAdapterDelegate<FilmData, GeneralRVType, MoviesAdapterDelegate.MoviesVH>() {
     override fun isForViewType(item: GeneralRVType, list: List<GeneralRVType?>, pos: Int): Boolean {
         return item is FilmData
@@ -34,7 +34,7 @@ class MoviesAdapterDelegate (private val onItemClick: (FilmData) -> Unit) :
         }
     }
 
-    inner class MoviesVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class MoviesVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val posterView: ImageView = itemView.findViewById(R.id.movies_icon)
         val titleView: TextView = itemView.findViewById(R.id.movies_title_text)
         val yearView: TextView = itemView.findViewById(R.id.years_text)

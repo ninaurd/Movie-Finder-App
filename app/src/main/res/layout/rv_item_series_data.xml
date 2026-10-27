@@ -1,77 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="6dp"
     android:background="@drawable/rv_background_series"
-    android:padding="10dp"
-    android:layout_margin="6dp">
+    android:padding="10dp">
 
-        <!-- CardView for the rounded corners -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/image_cardView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="12dp"
+    <!-- CardView for the rounded corners -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image_cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/series_icon"
+            android:layout_width="@dimen/movie_icon_size_rv"
+            android:layout_height="@dimen/movie_icon_size_rv"
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/series_icon"
-                android:layout_width="@dimen/movie_icon_size_rv"
-                android:layout_height="@dimen/movie_icon_size_rv"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:src="@drawable/closer_2004"
-                />
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/series_title_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/image_cardView"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="SERIES TITLE" />
+            tools:src="@drawable/closer_2004" />
+    </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/seasons_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:textSize="18sp"
-            app:layout_constraintStart_toEndOf="@+id/image_cardView"
-            app:layout_constraintTop_toBottomOf="@+id/series_title_text"
-            tools:text="Seasons: 5" />
+    <TextView
+        android:id="@+id/series_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/image_cardView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="SERIES TITLE" />
 
-        <TextView
-            android:id="@+id/years_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:textSize="18sp"
-            app:layout_constraintStart_toEndOf="@+id/seasons_text"
-            app:layout_constraintTop_toBottomOf="@+id/series_title_text"
-            tools:text="(2005-2011)" />
+    <TextView
+        android:id="@+id/seasons_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/image_cardView"
+        app:layout_constraintTop_toBottomOf="@+id/series_title_text"
+        tools:text="Seasons: 5" />
 
-        <!-- let's limit the description to two lines -->
-        <TextView
-            android:id="@+id/desc_text"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="10dp"
-            android:ellipsize="end"
-            android:maxLines="3"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/image_cardView"
-            app:layout_constraintTop_toBottomOf="@+id/years_text"
-            tools:text="A fun series you'd like to watch but keep postponing with various lousy excuses that keep popping up" />
+    <TextView
+        android:id="@+id/years_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/seasons_text"
+        app:layout_constraintTop_toBottomOf="@+id/series_title_text"
+        tools:text="(2005-2011)" />
+
+    <!-- let's limit the description to two lines -->
+    <TextView
+        android:id="@+id/desc_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_cardView"
+        app:layout_constraintTop_toBottomOf="@+id/years_text"
+        tools:text="A fun series you'd like to watch but keep postponing with various lousy excuses that keep popping up" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

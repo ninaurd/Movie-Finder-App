@@ -3,7 +3,7 @@ package com.example.movieslookupmanual
 import androidx.recyclerview.widget.DiffUtil
 import com.example.movieslookupmanual.data.GeneralRVType
 
-public class GeneralTypeDiffUtil(
+class GeneralTypeDiffUtil(
     val oldList: List<GeneralRVType>, val newList: List<GeneralRVType>
 ) : DiffUtil.Callback() {
     override fun getOldListSize(): Int = oldList.size
