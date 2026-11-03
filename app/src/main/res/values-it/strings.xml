@@ -33,6 +33,7 @@
     <string name="joker_description">Joaquin Phoenix truccato da Joker</string>
     <string name="closer_description">"Natalie Portman in una parrucca rosa a caschetto "</string>
     <string name="undone">Cancellato</string>
+    <string name="good">Ottimo.</string>
     <string name="fight_club_title">Fight Club</string>
     <string name="fight_club">Un impiegato che soffre di insonnia e un eccentrico produttore di sapone
     fondano un club di combattimento clandestino che si trasforma presto in qualcosa di molto più
@@ -176,7 +177,14 @@
         vera Lisa e aiutarlo a ritrovarla.</string>
     <plurals name="seasons">
         <item quantity="one">%d stagione</item>
+        <item quantity="many">%d stagioni</item>
         <item quantity="other">%d stagioni</item>
     </plurals>
+    <string name="dunno">Boh</string>
+    <string name="think_well">Pensaci bene…</string>
+    <string name="please_dont_exit">Sicuro sicuro?</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="really_exit">Vuoi uscire davvero?</string>
 
 </resources>

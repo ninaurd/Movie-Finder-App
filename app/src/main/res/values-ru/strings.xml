@@ -49,6 +49,7 @@
     <string name="undone">Действие отменено</string>
 
     <!-- ОПИСАНИЕ ФИЛЬМОВ -->
+    <string name="good">Это прекрасно.</string>
     <string name="fight_club_title">Бойцовский клуб</string>
     <string name="fight_club">Страдающий бессонницей офисный работник и эксцентричный продавец мыла
     создают подпольный бойцовский клуб, который постепенно превращается в нечто гораздо большее.\n\nБезымянный
@@ -191,4 +192,10 @@
         <item quantity="many">%d сезонов</item>
         <item quantity="other">%d сезона</item>
     </plurals>
+    <string name="dunno">Ммм…</string>
+    <string name="think_well">Подумай хорошенько…</string>
+    <string name="please_dont_exit">Точно-точно?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="really_exit">Правда хочешь выйти?</string>
 </resources>

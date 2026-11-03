@@ -11,6 +11,7 @@ constraintlayout = "2.2.2"
 cardview = "1.0.0"
 recyclerview = "1.4.0"
 adapterdelegates4KotlinDsl = "4.3.2"
+navigation = "2.10.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
