@@ -94,7 +94,6 @@ class MainFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_main, container, false)
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -120,8 +119,8 @@ class MainFragment : Fragment() {
             R.id.totoro to R.string.totoro_toast,
             R.id.the_green_mile to R.string.green_mile_toast
         )
-        // iterating over the Map, finding each element by id, setting a click listener and assigning
-        // a toast with the corresponding string from the Map
+        /* iterating over the Map, finding each element by id, setting a click listener
+        and assigning a toast with the corresponding string from the Map*/
         topScrollMovies.forEach { (imageId, textId) ->
             view.findViewById<ImageView>(imageId).setOnClickListener {
                 Toast.makeText(requireContext(), textId, Toast.LENGTH_SHORT).show()
@@ -133,5 +132,4 @@ class MainFragment : Fragment() {
     private fun openDetails(item: GeneralRVType) {
         (requireActivity() as MainActivity).launchDetailsFragment(item)
     }
-
 }

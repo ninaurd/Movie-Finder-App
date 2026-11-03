@@ -1,8 +1,11 @@
 package com.example.movieslookupmanual
 
 import android.os.Bundle
+import android.view.ContextThemeWrapper
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -22,7 +25,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         // adding and launching the fragment only once - when the activity starts
-        // as it's the first fragment, not adding to the BackStack
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
@@ -73,6 +75,33 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 else -> false
+            }
+        }
+
+        // exit alert dialog
+        onBackPressedDispatcher.addCallback(this) {
+            if (supportFragmentManager.backStackEntryCount > 0) {
+                supportFragmentManager.popBackStack()
+            } else {
+                AlertDialog.Builder(
+                    ContextThemeWrapper(
+                        this@MainActivity,
+                        R.style.ExitAlertDialogStyle
+                    )
+                )
+                    .setTitle(R.string.really_exit)
+                    .setMessage(R.string.please_dont_exit)
+                    .setIcon(R.drawable.ic_exit)
+                    .setPositiveButton(R.string.yes) { _, _ -> finish() }
+                    .setNegativeButton(R.string.no) { _, _ ->
+                        Toast.makeText(this@MainActivity, R.string.good, Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                    .setNeutralButton(R.string.dunno) { _, _ ->
+                        Toast.makeText(this@MainActivity, R.string.think_well, Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                    .show()
             }
         }
     }
