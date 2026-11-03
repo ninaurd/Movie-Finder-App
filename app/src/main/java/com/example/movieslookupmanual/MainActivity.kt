@@ -1,12 +1,15 @@
 package com.example.movieslookupmanual
 
 import android.os.Bundle
-import android.widget.ImageView
+import android.view.ContextThemeWrapper
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.movieslookupmanual.data.GeneralRVType
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -21,10 +24,21 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        // adding and launching the fragment only once - when the activity starts
+        if (savedInstanceState == null) {
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.fragment_placeholder, MainFragment())
+                .commit()
+        }
+
+        // toolbar toast - navigation
         val regularToolbar = findViewById<MaterialToolbar>(R.id.top_toolbar)
         regularToolbar.setNavigationOnClickListener {
             Toast.makeText(this, R.string.navigation_toast, Toast.LENGTH_SHORT).show()
         }
+
+        // toolbar items toasts
         regularToolbar.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.menu_menu -> {
@@ -40,6 +54,8 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+
+        // bottom navigation bar toasts
         val bottomToolbar = findViewById<BottomNavigationView>(R.id.bottom_toolbar)
         bottomToolbar.setOnItemSelectedListener {
             when (it.itemId) {
@@ -62,33 +78,49 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        findViewById<ImageView>(R.id.walle).setOnClickListener {
-            Toast.makeText(this, getString(R.string.walle_toast), Toast.LENGTH_SHORT).show()
+        // exit alert dialog
+        onBackPressedDispatcher.addCallback(this) {
+            if (supportFragmentManager.backStackEntryCount > 0) {
+                supportFragmentManager.popBackStack()
+            } else {
+                AlertDialog.Builder(
+                    ContextThemeWrapper(
+                        this@MainActivity,
+                        R.style.ExitAlertDialogStyle
+                    )
+                )
+                    .setTitle(R.string.really_exit)
+                    .setMessage(R.string.please_dont_exit)
+                    .setIcon(R.drawable.ic_exit)
+                    .setPositiveButton(R.string.yes) { _, _ -> finish() }
+                    .setNegativeButton(R.string.no) { _, _ ->
+                        Toast.makeText(this@MainActivity, R.string.good, Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                    .setNeutralButton(R.string.dunno) { _, _ ->
+                        Toast.makeText(this@MainActivity, R.string.think_well, Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                    .show()
+            }
         }
-        findViewById<ImageView>(R.id.closer).setOnClickListener {
-            Toast.makeText(this, getString(R.string.closer_toast), Toast.LENGTH_SHORT).show()
+    }
+
+    // separate function for transferring data bit by bit to the second fragment and opening it
+    fun launchDetailsFragment(item: GeneralRVType) {
+        val bundle = Bundle().apply {
+            putString("desc", item.desc)
+            putString("title", item.title)
+            putInt("poster", item.poster)
         }
-        findViewById<ImageView>(R.id.joker).setOnClickListener {
-            Toast.makeText(this, getString(R.string.joker_toast), Toast.LENGTH_SHORT).show()
-        }
-        findViewById<ImageView>(R.id.seven_pounds).setOnClickListener {
-            Toast.makeText(this, getString(R.string.seven_pounds_toast), Toast.LENGTH_SHORT).show()
-        }
-        findViewById<ImageView>(R.id.shutter_island).setOnClickListener {
-            Toast.makeText(this, getString(R.string.shutter_island_toast), Toast.LENGTH_SHORT)
-                .show()
-        }
-        findViewById<ImageView>(R.id.sixth_sense).setOnClickListener {
-            Toast.makeText(this, getString(R.string.sixth_sense_toast), Toast.LENGTH_SHORT).show()
-        }
-        findViewById<ImageView>(R.id.leon).setOnClickListener {
-            Toast.makeText(this, getString(R.string.leon_toast), Toast.LENGTH_SHORT).show()
-        }
-        findViewById<ImageView>(R.id.totoro).setOnClickListener {
-            Toast.makeText(this, getString(R.string.totoro_toast), Toast.LENGTH_SHORT).show()
-        }
-        findViewById<ImageView>(R.id.the_green_mile).setOnClickListener {
-            Toast.makeText(this, getString(R.string.green_mile_toast), Toast.LENGTH_SHORT).show()
-        }
+
+        val fragment = DetailsFragment()
+        fragment.arguments = bundle
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_placeholder, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 }

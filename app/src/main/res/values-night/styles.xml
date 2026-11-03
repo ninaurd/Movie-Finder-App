@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="TopToolbarStyle" parent="Widget.Material3.Toolbar">
         <item name="android:background">@color/black</item>
         <item name="titleTextAppearance">@style/ToolbarTextStyle</item>
@@ -11,7 +12,7 @@
         <item name="android:textStyle">bold</item>
         <item name="fontFamily">@font/ubuntu_bold</item>
         <item name="itemTextColor">@color/white_day_night</item>
-        <item name="android:textSize">@dimen/toolbar_text_size</item>
+        <item name="android:textSize">@dimen/toolbar_text_size_regular</item>
     </style>
 
     <style name="BottomToolbarStyle" parent="Widget.Design.BottomNavigationView">
@@ -30,7 +31,7 @@
         <item name="android:background">@color/black_lighter</item>
         <item name="android:fontFamily">@font/ubuntu_bold</item>
         <item name="android:textColor">@color/white_day_night</item>
-        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textSize">@dimen/title_text_size_regular</item>
     </style>
 
 </resources>
