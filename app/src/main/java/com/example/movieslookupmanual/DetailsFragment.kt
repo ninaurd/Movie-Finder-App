@@ -13,11 +13,14 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 
 class DetailsFragment : Fragment() {
+
+    private val args: DetailsFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,13 +33,8 @@ class DetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // all arguments are required to display the item
-        val args = requireArguments()
-
-        // getting data from Bundle by keys
-        val desc = args.getString("desc")
-        val title = args.getString("title")
-        val poster = args.getInt("poster")
+        // getting the parcelized object from Safe Args
+        val item = args.item
 
         // finding the elements in the layout
         val descView = view.findViewById<TextView>(R.id.details_description)
@@ -44,9 +42,9 @@ class DetailsFragment : Fragment() {
         val posterView = view.findViewById<AppCompatImageView>(R.id.details_poster)
 
         // displaying data in the Views
-        descView.text = desc
-        detailsTopBar.title = title
-        posterView.setImageResource(poster)
+        descView.text = item.desc
+        detailsTopBar.title = item.title
+        posterView.setImageResource(item.poster)
 
         // setting toolbar's title color in expanded and collapsed states
         val collapsingToolbar = view.findViewById<CollapsingToolbarLayout>(R.id.toolbar_layout)

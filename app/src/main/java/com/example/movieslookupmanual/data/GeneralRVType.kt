@@ -1,6 +1,8 @@
 package com.example.movieslookupmanual.data
 
-interface GeneralRVType {
+import android.os.Parcelable
+
+interface GeneralRVType : Parcelable {
     val id: Int
     val title: String
     val desc: String

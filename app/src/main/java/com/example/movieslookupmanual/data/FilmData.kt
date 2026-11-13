@@ -1,7 +1,9 @@
 package com.example.movieslookupmanual.data
 
 import androidx.annotation.DrawableRes
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class FilmData(
     override val id: Int,
     override val title: String,

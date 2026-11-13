@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.fragment.NavHostFragment
 import com.example.movieslookupmanual.data.GeneralRVType
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -24,13 +25,11 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // adding and launching the fragment only once - when the activity starts
-        if (savedInstanceState == null) {
-            supportFragmentManager
-                .beginTransaction()
-                .add(R.id.fragment_placeholder, MainFragment())
-                .commit()
-        }
+        // preparing the navigation controller for toolbars
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+
 
         // toolbar toast - navigation
         val regularToolbar = findViewById<MaterialToolbar>(R.id.top_toolbar)
@@ -80,8 +79,8 @@ class MainActivity : AppCompatActivity() {
 
         // exit alert dialog
         onBackPressedDispatcher.addCallback(this) {
-            if (supportFragmentManager.backStackEntryCount > 0) {
-                supportFragmentManager.popBackStack()
+            if (navController.previousBackStackEntry != null) {
+                navController.popBackStack()
             } else {
                 AlertDialog.Builder(
                     ContextThemeWrapper(
@@ -104,23 +103,5 @@ class MainActivity : AppCompatActivity() {
                     .show()
             }
         }
-    }
-
-    // separate function for transferring data bit by bit to the second fragment and opening it
-    fun launchDetailsFragment(item: GeneralRVType) {
-        val bundle = Bundle().apply {
-            putString("desc", item.desc)
-            putString("title", item.title)
-            putInt("poster", item.poster)
-        }
-
-        val fragment = DetailsFragment()
-        fragment.arguments = bundle
-
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.fragment_placeholder, fragment)
-            .addToBackStack(null)
-            .commit()
     }
 }

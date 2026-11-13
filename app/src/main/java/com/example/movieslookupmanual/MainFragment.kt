@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieslookupmanual.adapters.RVAdapter
 import com.example.movieslookupmanual.data.FilmData
@@ -14,7 +15,6 @@ import com.example.movieslookupmanual.data.GeneralRVType
 import com.example.movieslookupmanual.data.SeriesData
 
 class MainFragment : Fragment() {
-
     // temporary fixed movies and series list - will be replaced with some server import
     val items: List<GeneralRVType> by lazy {
         listOf(
@@ -100,7 +100,7 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val recycler = view.findViewById<RecyclerView>(R.id.recycler)
 
-        // setting up the RV adapter
+        // setting up the RV adapter and action on click
         val adapter = RVAdapter { item: GeneralRVType ->
             openDetails(item)
         }
@@ -128,8 +128,8 @@ class MainFragment : Fragment() {
         }
     }
 
-    // calling the function from MainActivity, passing on the item
+    // moving to the DetailsFragment carrying the data with Safe Args
     private fun openDetails(item: GeneralRVType) {
-        (requireActivity() as MainActivity).launchDetailsFragment(item)
+        findNavController().navigate(MainFragmentDirections.actionMainToDetails(item))
     }
 }
