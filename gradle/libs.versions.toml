@@ -28,4 +28,5 @@ adapterdelegates4-kotlin-dsl = { group = "com.hannesdorfmann", name = "adapterde
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+navigation-safe-args = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
 
