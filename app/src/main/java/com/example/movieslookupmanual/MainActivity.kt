@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.menu_favourites -> {
-                    navController.navigate(R.id.action_main_to_fav)
+                    navController.navigate(R.id.action_to_favourites)
                     true
                 }
 
