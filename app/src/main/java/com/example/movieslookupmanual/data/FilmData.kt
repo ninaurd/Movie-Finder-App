@@ -10,5 +10,6 @@ data class FilmData(
     val year: Int,
     // Int: id of the image from res
     @DrawableRes override val poster: Int,
-    override val desc: String
+    override val desc: String,
+    override var isFav:Boolean = false
 ) : GeneralRVType

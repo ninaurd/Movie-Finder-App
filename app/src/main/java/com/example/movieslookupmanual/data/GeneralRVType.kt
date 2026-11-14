@@ -7,4 +7,5 @@ interface GeneralRVType : Parcelable {
     val title: String
     val desc: String
     val poster: Int
+    var isFav: Boolean
 }

@@ -129,7 +129,7 @@ class MainFragment : Fragment() {
     }
 
     // moving to the DetailsFragment carrying the data with Safe Args
-    private fun openDetails(item: GeneralRVType) {
+    fun openDetails(item: GeneralRVType) {
         findNavController().navigate(MainFragmentDirections.actionMainToDetails(item))
     }
 }

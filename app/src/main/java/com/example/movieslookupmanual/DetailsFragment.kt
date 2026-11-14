@@ -46,6 +46,23 @@ class DetailsFragment : Fragment() {
         detailsTopBar.title = item.title
         posterView.setImageResource(item.poster)
 
+        // setting FAB icon and on click reaction
+        val fabFav = view.findViewById<FloatingActionButton>(R.id.details_fab_favorites)
+        fabFav.apply {
+            setImageResource(
+                if (item.isFav) R.drawable.ic_heart_full else R.drawable.ic_heart_empty)
+            setOnClickListener {
+                if (!item.isFav) {
+                    setImageResource(R.drawable.ic_heart_full)
+                    item.isFav = true
+                } else {
+                    setImageResource(R.drawable.ic_heart_empty)
+                    item.isFav = false
+                }
+            }
+        }
+
+
         // setting toolbar's title color in expanded and collapsed states
         val collapsingToolbar = view.findViewById<CollapsingToolbarLayout>(R.id.toolbar_layout)
         collapsingToolbar.apply {
@@ -64,12 +81,13 @@ class DetailsFragment : Fragment() {
         }
 
         // just a little toast for the FAB
-        val detailsFAB = view.findViewById<FloatingActionButton>(R.id.details_fab)
-        detailsFAB.setOnClickListener {
+        val fabShare = view.findViewById<FloatingActionButton>(R.id.details_fab_share)
+        fabShare.setOnClickListener {
             Toast.makeText(
                 requireContext(), R.string.share, Toast.LENGTH_SHORT
             ).show()
         }
+
 
         // on click snackbars created via my custom method setSnackBar
         detailsTopBar.setOnMenuItemClickListener {

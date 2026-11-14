@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.menu_favourites -> {
-                    Toast.makeText(this, R.string.favourites_toast, Toast.LENGTH_SHORT).show()
+                    navController.navigate(R.id.action_main_to_fav)
                     true
                 }
 

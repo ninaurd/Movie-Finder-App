@@ -154,7 +154,7 @@
         android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/img_disclaimer"
-        tools:layout_editor_absoluteX="-16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/rv_item_film_data" />
 
 
