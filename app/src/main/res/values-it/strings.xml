@@ -34,6 +34,8 @@
     <string name="closer_description">"Natalie Portman in una parrucca rosa a caschetto "</string>
     <string name="undone">Cancellato</string>
     <string name="good">Ottimo.</string>
+    <string name="share_via">Condividere con:</string>
+    <string name="check_it_out">Dai un\'occhiata a questo film: \"%1$s\"\n\n%2$s</string>
     <string name="fight_club_title">Fight Club</string>
     <string name="fight_club">Un impiegato che soffre di insonnia e un eccentrico produttore di sapone
     fondano un club di combattimento clandestino che si trasforma presto in qualcosa di molto più

@@ -1,5 +1,6 @@
 package com.example.movieslookupmanual
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -50,7 +51,8 @@ class DetailsFragment : Fragment() {
         val fabFav = view.findViewById<FloatingActionButton>(R.id.details_fab_favorites)
         fabFav.apply {
             setImageResource(
-                if (item.isFav) R.drawable.ic_heart_full else R.drawable.ic_heart_empty)
+                if (item.isFav) R.drawable.ic_heart_full else R.drawable.ic_heart_empty
+            )
             setOnClickListener {
                 if (!item.isFav) {
                     setImageResource(R.drawable.ic_heart_full)
@@ -61,7 +63,6 @@ class DetailsFragment : Fragment() {
                 }
             }
         }
-
 
         // setting toolbar's title color in expanded and collapsed states
         val collapsingToolbar = view.findViewById<CollapsingToolbarLayout>(R.id.toolbar_layout)
@@ -80,12 +81,17 @@ class DetailsFragment : Fragment() {
             )
         }
 
-        // just a little toast for the FAB
+        // setting up share FAB with a text
         val fabShare = view.findViewById<FloatingActionButton>(R.id.details_fab_share)
         fabShare.setOnClickListener {
-            Toast.makeText(
-                requireContext(), R.string.share, Toast.LENGTH_SHORT
-            ).show()
+            val intent = Intent(Intent.ACTION_SEND).apply {
+                putExtra(
+                    Intent.EXTRA_TEXT,
+                    getString(R.string.check_it_out, item.title, item.desc)
+                )
+                type = "text/plain"
+            }
+            startActivity(Intent.createChooser(intent, getString(R.string.share_via)))
         }
 
 
