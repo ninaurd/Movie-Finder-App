@@ -9,6 +9,7 @@
     app:layout_behavior="@string/bottom_sheet_behavior">
 
     <ImageView
+        android:id="@+id/gift_box"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginBottom="14dp"

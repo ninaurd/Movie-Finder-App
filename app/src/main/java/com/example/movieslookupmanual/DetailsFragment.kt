@@ -1,11 +1,11 @@
 package com.example.movieslookupmanual
 
-import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -115,6 +115,11 @@ class DetailsFragment : Fragment() {
             }
             true
         }
+
+        // on create little animation for the box
+        val giftBox = view.findViewById<ImageView>(R.id.gift_box)
+        val giftBoxAnimation = AnimationUtils.loadAnimation(requireContext(),R.anim.gift_box_popping)
+        giftBox.startAnimation(giftBoxAnimation)
 
         // on click bottom sheet with a link to Google Play
         val bottomImage = view.findViewById<ImageView>(R.id.rate_us_img)
