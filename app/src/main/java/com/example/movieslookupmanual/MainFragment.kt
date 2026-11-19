@@ -77,7 +77,13 @@ class MainFragment : Fragment() {
                 R.drawable.movie_ic_blacklist,
                 getString(R.string.blacklist)
             ),
-            FilmData(9, getString(R.string.up_title), 2009, R.drawable.movie_ic_up, getString(R.string.up)),
+            FilmData(
+                9,
+                getString(R.string.up_title),
+                2009,
+                R.drawable.movie_ic_up,
+                getString(R.string.up)
+            ),
             FilmData(
                 10,
                 getString(R.string.wicker_park_title),
@@ -111,18 +117,19 @@ class MainFragment : Fragment() {
         // making searchbar clickable entirely and setting the listener
         searchBar.apply {
             setOnClickListener { isIconified = false }
-            setOnQueryTextListener(object: SearchView.OnQueryTextListener{
+            setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(query: String?): Boolean {
                     return true
                 }
 
                 override fun onQueryTextChange(newText: String?): Boolean {
-                    if(newText.isNullOrBlank()) {
+                    if (newText.isNullOrBlank()) {
                         adapter.setItems(items)
                         return true
                     }
-                    val result =items.filter {
-                        it.title.lowercase(Locale.getDefault()).contains(newText.lowercase(Locale.getDefault()))
+                    val result = items.filter {
+                        it.title.lowercase(Locale.getDefault())
+                            .contains(newText.lowercase(Locale.getDefault()))
                     }
                     adapter.setItems(result)
                     return true

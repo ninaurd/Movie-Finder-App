@@ -118,7 +118,8 @@ class DetailsFragment : Fragment() {
 
         // on create little animation for the box
         val giftBox = view.findViewById<ImageView>(R.id.gift_box)
-        val giftBoxAnimation = AnimationUtils.loadAnimation(requireContext(),R.anim.gift_box_popping)
+        val giftBoxAnimation =
+            AnimationUtils.loadAnimation(requireContext(), R.anim.gift_box_popping)
         giftBox.startAnimation(giftBoxAnimation)
 
         // on click bottom sheet with a link to Google Play

@@ -12,5 +12,5 @@ data class SeriesData(
     // Int: id of the image from res
     @DrawableRes override val poster: Int,
     override val desc: String,
-    override var isFav:Boolean = false
+    override var isFav: Boolean = false
 ) : GeneralRVType
