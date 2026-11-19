@@ -107,25 +107,6 @@ class MainFragment : Fragment() {
         recycler.adapter = adapter
         adapter.setItems(items)
 
-        // NOT requested by the task: little toasts for the top scrolling bar in one Map
-        val topScrollMovies = mapOf(
-            R.id.walle to R.string.walle_toast,
-            R.id.closer to R.string.closer_toast,
-            R.id.joker to R.string.joker_toast,
-            R.id.seven_pounds to R.string.seven_pounds_toast,
-            R.id.shutter_island to R.string.shutter_island_toast,
-            R.id.sixth_sense to R.string.sixth_sense_toast,
-            R.id.leon to R.string.leon_toast,
-            R.id.totoro to R.string.totoro_toast,
-            R.id.the_green_mile to R.string.green_mile_toast
-        )
-        /* iterating over the Map, finding each element by id, setting a click listener
-        and assigning a toast with the corresponding string from the Map*/
-        topScrollMovies.forEach { (imageId, textId) ->
-            view.findViewById<ImageView>(imageId).setOnClickListener {
-                Toast.makeText(requireContext(), textId, Toast.LENGTH_SHORT).show()
-            }
-        }
     }
 
     // moving to the DetailsFragment carrying the data with Safe Args
