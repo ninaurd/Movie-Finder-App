@@ -13,7 +13,7 @@
         android:layout_height="70dp"
         android:layout_marginBottom="14dp"
         android:layout_gravity="center"
-        android:src="@drawable/box_arrow" />
+        android:src="@drawable/bottom_sheet_box_arrow" />
 
     <ImageView
         android:id="@+id/rate_us_img"
@@ -21,6 +21,6 @@
         android:layout_height="170dp"
         android:clickable="true"
         android:focusable="true"
-        android:src="@drawable/rate_us_peeking" />
+        android:src="@drawable/bottom_sheet_rate_us_peeking" />
 
 </LinearLayout>

@@ -23,10 +23,6 @@
         <item name="itemIconSize">@dimen/item_icon_size</item>
     </style>
 
-    <style name="ImagesContainerStyle">
-        <item name="android:background">@color/black</item>
-    </style>
-
     <style name="TopTitleStyle">
         <item name="android:background">@color/black_lighter</item>
         <item name="android:fontFamily">@font/ubuntu_bold</item>
