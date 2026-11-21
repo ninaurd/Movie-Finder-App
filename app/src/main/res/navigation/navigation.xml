@@ -9,7 +9,7 @@
         android:id="@+id/mainFragment"
         android:name="com.example.movieslookupmanual.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_main_to_details"
             app:destination="@id/detailsFragment"
@@ -22,7 +22,7 @@
         android:id="@+id/detailsFragment"
         android:name="com.example.movieslookupmanual.DetailsFragment"
         android:label="fragment_details"
-        tools:layout="@layout/fragment_details" >
+        tools:layout="@layout/fragment_details">
         <argument
             android:name="item"
             app:argType="com.example.movieslookupmanual.data.GeneralRVType" />
@@ -31,7 +31,7 @@
         android:id="@+id/favFragment"
         android:name="com.example.movieslookupmanual.FavFragment"
         android:label="fragment_fav"
-        tools:layout="@layout/fragment_fav" >
+        tools:layout="@layout/fragment_fav">
         <action
             android:id="@+id/action_fav_to_details"
             app:destination="@id/detailsFragment"

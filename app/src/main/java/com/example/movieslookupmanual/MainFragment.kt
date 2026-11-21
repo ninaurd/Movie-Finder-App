@@ -4,8 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.Toast
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +12,7 @@ import com.example.movieslookupmanual.adapters.RVAdapter
 import com.example.movieslookupmanual.data.FilmData
 import com.example.movieslookupmanual.data.GeneralRVType
 import com.example.movieslookupmanual.data.SeriesData
+import java.util.Locale
 
 class MainFragment : Fragment() {
     // temporary fixed movies and series list - will be replaced with some server import
@@ -22,21 +22,21 @@ class MainFragment : Fragment() {
                 1,
                 getString(R.string.fight_club_title),
                 1999,
-                R.drawable.fight_club,
+                R.drawable.movie_ic_fight_club,
                 getString(R.string.fight_club)
             ),
             FilmData(
                 2,
                 getString(R.string.matrix_title),
                 1999,
-                R.drawable.matrix,
+                R.drawable.movie_ic_matrix,
                 getString(R.string.matrix)
             ),
             FilmData(
                 3,
                 getString(R.string.the_housemaid_title),
                 2025,
-                R.drawable.the_housemaid,
+                R.drawable.movie_ic_the_housemaid,
                 getString(R.string.the_housemaid)
             ),
             SeriesData(
@@ -44,7 +44,7 @@ class MainFragment : Fragment() {
                 getString(R.string.money_heist_title),
                 "(2017-2021)",
                 5,
-                R.drawable.money_heist,
+                R.drawable.movie_ic_money_heist,
                 getString(R.string.money_heist)
             ),
             SeriesData(
@@ -52,21 +52,21 @@ class MainFragment : Fragment() {
                 getString(R.string.squid_game_title),
                 "(2021-2025)",
                 3,
-                R.drawable.squid_game,
+                R.drawable.movie_ic_squid_game,
                 getString(R.string.squid_game)
             ),
             FilmData(
                 6,
                 getString(R.string.the_substance_title),
                 2024,
-                R.drawable.the_substance,
+                R.drawable.movie_ic_the_substance,
                 getString(R.string.the_substance)
             ),
             FilmData(
                 7,
                 getString(R.string.untouchable_title),
                 2011,
-                R.drawable.untouchable,
+                R.drawable.movie_ic_untouchable,
                 getString(R.string.untouchable)
             ),
             SeriesData(
@@ -74,15 +74,21 @@ class MainFragment : Fragment() {
                 getString(R.string.blacklist_title),
                 "(2013-2023)",
                 10,
-                R.drawable.blacklist,
+                R.drawable.movie_ic_blacklist,
                 getString(R.string.blacklist)
             ),
-            FilmData(9, getString(R.string.up_title), 2009, R.drawable.up, getString(R.string.up)),
+            FilmData(
+                9,
+                getString(R.string.up_title),
+                2009,
+                R.drawable.movie_ic_up,
+                getString(R.string.up)
+            ),
             FilmData(
                 10,
                 getString(R.string.wicker_park_title),
                 2004,
-                R.drawable.wicker_park,
+                R.drawable.movie_ic_wicker_park,
                 getString(R.string.wicker_park)
             )
         )
@@ -99,6 +105,7 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val recycler = view.findViewById<RecyclerView>(R.id.recycler)
+        val searchBar = view.findViewById<SearchView>(R.id.search_view)
 
         // setting up the RV adapter and action on click
         val adapter = RVAdapter { item: GeneralRVType ->
@@ -107,24 +114,27 @@ class MainFragment : Fragment() {
         recycler.adapter = adapter
         adapter.setItems(items)
 
-        // NOT requested by the task: little toasts for the top scrolling bar in one Map
-        val topScrollMovies = mapOf(
-            R.id.walle to R.string.walle_toast,
-            R.id.closer to R.string.closer_toast,
-            R.id.joker to R.string.joker_toast,
-            R.id.seven_pounds to R.string.seven_pounds_toast,
-            R.id.shutter_island to R.string.shutter_island_toast,
-            R.id.sixth_sense to R.string.sixth_sense_toast,
-            R.id.leon to R.string.leon_toast,
-            R.id.totoro to R.string.totoro_toast,
-            R.id.the_green_mile to R.string.green_mile_toast
-        )
-        /* iterating over the Map, finding each element by id, setting a click listener
-        and assigning a toast with the corresponding string from the Map*/
-        topScrollMovies.forEach { (imageId, textId) ->
-            view.findViewById<ImageView>(imageId).setOnClickListener {
-                Toast.makeText(requireContext(), textId, Toast.LENGTH_SHORT).show()
-            }
+        // making searchbar clickable entirely and setting the listener
+        searchBar.apply {
+            setOnClickListener { isIconified = false }
+            setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                override fun onQueryTextSubmit(query: String?): Boolean {
+                    return true
+                }
+
+                override fun onQueryTextChange(newText: String?): Boolean {
+                    if (newText.isNullOrBlank()) {
+                        adapter.setItems(items)
+                        return true
+                    }
+                    val result = items.filter {
+                        it.title.lowercase(Locale.getDefault())
+                            .contains(newText.lowercase(Locale.getDefault()))
+                    }
+                    adapter.setItems(result)
+                    return true
+                }
+            })
         }
     }
 
